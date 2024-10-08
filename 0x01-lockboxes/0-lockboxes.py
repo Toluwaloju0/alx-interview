@@ -11,19 +11,21 @@ def canUnlockAll(boxes):
 
     checker = set([0])
     newList = []
-    
-    # Iterate over the boxes, first check if the key is in the set before checking it
+
+    if boxes is None or not isinstance(boxes, (list)):
+        return False
+    # Iterate over the boxes, checking if the key is in the set.
     for box in range(len(boxes)):
         if box in checker:
             for key in boxes[box]:
                 checker.add(key)
                 if key < box:
-                     for P_key in boxes[key]:
+                    for P_key in boxes[key]:
                         checker.add(P_key)
         else:
             newList.append(box)
 
-    final = []  
+    final = []
     # Using newList check for missing keys
     for key in newList:
         if key not in checker:
