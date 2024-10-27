@@ -43,8 +43,9 @@ for line in sys.stdin:
     if i_format.match(line):
         count += 1
         line = line.split()
-        status_code[line[-2]] += 1
-        file_size += int(line[-1])
+        if line[-2] in status_code.keys():
+            status_code[line[-2]] += 1
+            file_size += int(line[-1])
     if count == 10:
         print_file(file_size, status_code)
         count = 0
