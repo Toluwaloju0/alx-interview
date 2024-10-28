@@ -40,6 +40,9 @@ signal.signal(signal.SIGINT, handler)
 
 # iterate over the stdin file descriptor
 for line in sys.stdin:
+    if line.rstrip() == '':
+        print_file(file_size, status_code)
+        exit()
     if i_format.match(line):
         count += 1
         line = line.split()
