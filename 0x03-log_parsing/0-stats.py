@@ -23,7 +23,9 @@ status_code = {
 }
 file_size = 0
 count = 0
-i_format = re.compile(r'^(\S+) - \[(.*?)\] "(GET \/projects\/\d+ HTTP\/1\.1)" (\d{3}) (\d+)$')
+i_format = re.compile(
+    r'^(\S+)-? \[(.*?)\] "(GET \/projects\/\d+ HTTP\/1\.1)" (\d{3}) (\d+)$'
+)
 
 
 def handler(signum, frame):
