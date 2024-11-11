@@ -3,6 +3,7 @@
 
 import sys
 
+
 def check(list_list, right, left, number):
     """To check the list_list if pos_list can be placed inside"""
 
@@ -14,26 +15,26 @@ def check(list_list, right, left, number):
         a += 1
     # check the diagonal lines going up left for any appearance of number
     a, b = right, left
-    while a >=0 and b >= 0:
-        if[a, b] in list_list:
+    while a >= 0 and b >= 0:
+        if [a, b] in list_list:
             return False
         a, b = a - 1, b - 1
     # check the diagonal lines going down right for any appearance of number
     a, b = right, left
     while a < number and b < number:
-        if[a, b] in list_list:
+        if [a, b] in list_list:
             return False
         a, b = a + 1, b + 1
     # check the diagonal lines going down left for any appearance of number
     a, b = right, left
-    while a >=0 and b < number:
-        if[a, b] in list_list:
+    while a >= 0 and b < number:
+        if [a, b] in list_list:
             return False
         a, b = a - 1, b + 1
     # check the diagonal lines going down right for any appearance of number
     a, b = right, left
     while a < number and b >= 0:
-        if[a, b] in list_list:
+        if [a, b] in list_list:
             return False
         a, b = a + 1, b - 1
     return True
