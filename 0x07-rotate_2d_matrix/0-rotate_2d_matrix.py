@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""A module to rotate pieces of a matrix"""
+"""A module to rotate
+pieces of a matrix"""
 
 
 def rotate_2d_matrix(matrix: list[list]) -> None:
@@ -9,7 +10,7 @@ def rotate_2d_matrix(matrix: list[list]) -> None:
         return None
     length = len(matrix)
 
-    # create a new matrix and set 
+    # create a new matrix and set
     new_mat = [[0] * length for _ in range(length)]
     for a in range(len(matrix)):
         for b in range(len(matrix)):
