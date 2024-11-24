@@ -1,5 +1,20 @@
 #!/usr/bin/python3
-"""A module to rotate a 2-D matrix"""
+"""A module to rotate a 2-D matrix
+Example
+```
+matrix = [[1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]]
+
+rotate_2d_mareix(matrix)
+
+print(matrix)
+[[7, 4, 1],
+[8, 5, 2],
+[9, 6, 3]]
+
+```
+"""
 
 
 def rotate_2d_matrix(matrix: list[list]) -> None:
