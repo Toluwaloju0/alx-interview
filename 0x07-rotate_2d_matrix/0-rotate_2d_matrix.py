@@ -17,7 +17,7 @@ print(matrix)
 """
 
 
-def rotate_2d_matrix(matrix: list[list]) -> None:
+def rotate_2d_matrix(matrix) -> None:
     """A list of list
     to be rotated"""
 
