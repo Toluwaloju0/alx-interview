@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""A module to rotate
-pieces of a matrix"""
+"""A module to rotate a 2-D matrix"""
 
 
 def rotate_2d_matrix(matrix: list[list]) -> None:
