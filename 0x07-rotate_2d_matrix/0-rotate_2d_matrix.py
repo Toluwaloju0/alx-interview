@@ -18,7 +18,8 @@ print(matrix)
 
 
 def rotate_2d_matrix(matrix: list[list]) -> None:
-    """A list of list to be rotated"""
+    """A list of list
+    to be rotated"""
 
     if matrix is None:
         return None
