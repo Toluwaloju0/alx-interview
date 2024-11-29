@@ -7,6 +7,8 @@ def makeChange(coins, total):
 
     if total <= 0:
         return 0
+    if len(coins) == 0:
+        return -1
 
     given_coin = 0
     coins.sort(reverse=True)
