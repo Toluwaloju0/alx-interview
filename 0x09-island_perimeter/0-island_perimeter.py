@@ -9,21 +9,18 @@ def island_perimeter(grid):
     if len(grid) == 0:
         return 0
     # Iterate through the grid to get lands
-    try:
-        perimeter = 0
-        for a in range(len(grid)):
-            for b in range(len(grid)):
-                if grid[a][b] == 0:
-                    continue
-                # Check the surrounding fo water
-                if b > 0 and grid[a][b - 1] == 0:
-                    perimeter += 1
-                if grid[a][b + 1] == 0:
-                    perimeter += 1
-                if a > 0 and grid[a - 1][b] == 0:
-                    perimeter += 1
-                if grid[a + 1][b] == 0:
-                    perimeter += 1
-        return perimeter
-    except IndexError:
-        pass
+    perimeter = 0
+    for a in range(1, len(grid) - 1):
+        for b in range(len(grid)):
+            if grid[a][b] == 0:
+                continue
+            # Check the surrounding fo water
+            if grid[a][b - 1] == 0:
+                perimeter += 1
+            if grid[a][b + 1] == 0:
+                perimeter += 1
+            if grid[a - 1][b] == 0:
+                perimeter += 1
+            if grid[a + 1][b] == 0:
+                perimeter += 1
+    return perimeter
