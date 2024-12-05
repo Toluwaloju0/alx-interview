@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A module to calculate the perimeter of an island"""
 
+
 def island_perimeter(grid):
     """A function to calculate the perimeter of an island
     land is represented by 1 in the grid"""
@@ -15,11 +16,11 @@ def island_perimeter(grid):
                 if grid[a][b] == 0:
                     continue
                 # Check the surrounding fo water
-                if grid[a][b - 1] == 0:
+                if b > 0 and grid[a][b - 1] == 0:
                     perimeter += 1
                 if grid[a][b + 1] == 0:
                     perimeter += 1
-                if grid[a - 1][b] == 0:
+                if a > 0 and grid[a - 1][b] == 0:
                     perimeter += 1
                 if grid[a + 1][b] == 0:
                     perimeter += 1
