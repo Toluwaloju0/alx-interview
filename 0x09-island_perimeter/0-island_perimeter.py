@@ -6,8 +6,8 @@ def island_perimeter(grid):
     """A function to calculate the perimeter of an island
     land is represented by 1 in the grid"""
 
-    if len(grid) == 0:
-        return 0
+    # if len(grid) == 0:
+    #     return 0
     # Iterate through the grid to get lands
     perimeter = 0
     for a in range(1, len(grid) - 1):
