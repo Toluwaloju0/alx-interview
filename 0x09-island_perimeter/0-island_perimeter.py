@@ -11,16 +11,16 @@ def island_perimeter(grid):
     # Iterate through the grid to get lands
     perimeter = 0
     for a in range(1, len(grid) - 1):
-        for b in range(len(grid)):
+        for b in range(1, len(grid) - 1):
             if grid[a][b] == 0:
                 continue
             # Check the surrounding fo water
-            if grid[a][b - 1] == 0:
+            if grid[a][b - 1] == 0:  # check left
                 perimeter += 1
-            if grid[a][b + 1] == 0:
+            if grid[a][b + 1] == 0:  # check right
                 perimeter += 1
-            if grid[a - 1][b] == 0:
+            if grid[a - 1][b] == 0:  # check bottom
                 perimeter += 1
-            if grid[a + 1][b] == 0:
+            if grid[a + 1][b] == 0:  # check top
                 perimeter += 1
     return perimeter
