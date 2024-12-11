@@ -15,6 +15,11 @@ def is_prime(num):
 
 
 def isWinner(x, nums):
+    """A function to play a prime game between Maria and Ben
+    Maria goes first always and chooses prime numbers in a given
+    range
+    if no more prime number to chose the player wins
+    """
     ben_score = 0
     maria_score = 0
 
